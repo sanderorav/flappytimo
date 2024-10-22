@@ -173,7 +173,7 @@ def main():
                         hurt_sound.play()
 
             # Display the live score counter
-            score_text = font_large.render(str(math.floor(score)), True, (255, 255, 255))
+            score_text = font_large.render(str(math.floor(score)), True, (255, 255, 0))
             screen.blit(score_text,
                         ((SCREEN_WIDTH - score_text.get_width()) / 2,
                          ((SCREEN_HEIGHT / 4) - score_text.get_height())))
@@ -192,18 +192,22 @@ def main():
             # Display the endscreen, including score and best score
             screen.blit(score_img, (0, 0))
 
+            skill_issue_text = font.render('SKILL ISSUE!', True, (0, 0, 0))
             score_text = font.render(f"Score: {score}", True, (0, 0, 0))
             best_score_text = font.render(f"Best: {best_score}", True, (0, 0, 0))
             play_again_text = font.render("Press SPACE to restart", True, (0, 0, 0))
 
             # Hard-coded coordinates below.
             # Feel free to experiment with them!
+            screen.blit(skill_issue_text,
+                        ((SCREEN_WIDTH - skill_issue_text.get_width()) / 2,
+                         ((SCREEN_HEIGHT / 2) - skill_issue_text.get_height() - 60)))
             screen.blit(score_text,
                         ((SCREEN_WIDTH - score_text.get_width()) / 2,
-                         ((SCREEN_HEIGHT / 2) - score_text.get_height() - 60)))
+                         ((SCREEN_HEIGHT / 2) - score_text.get_height() - 10)))
             screen.blit(best_score_text,
                         ((SCREEN_WIDTH - best_score_text.get_width()) / 2,
-                         ((SCREEN_HEIGHT / 2) - best_score_text.get_height() - 10)))
+                         ((SCREEN_HEIGHT / 2) - best_score_text.get_height() + 40)))
             screen.blit(play_again_text,
                         ((SCREEN_WIDTH - play_again_text.get_width()) / 2,
                          ((SCREEN_HEIGHT / 2) - play_again_text.get_height() + 95)))
