@@ -4,10 +4,10 @@ import pygame
 
 # Load images
 # Here's some examples how images can be loaded using PyGame.
-background_img = pygame.image.load("images/meme.jpg")
+background_img = pygame.image.load("images/background.jpg")
 pipe_img = pygame.image.load("images/cat5.png")
 score_img = pygame.image.load("images/score.png")
-logo_img = pygame.image.load("images/logo_parem_kui_varem.png")
+logo_img = pygame.image.load("images/logo.png")
 instructions_img = pygame.image.load("images/instructions.png")
 bird_img = pygame.image.load('images/timo.png')
 
